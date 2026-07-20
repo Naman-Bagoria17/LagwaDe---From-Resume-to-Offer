@@ -12,6 +12,12 @@
 
 ---
 
+## 🚀 Live Demo
+
+🌐 **Deployed Application:** [https://lagwade.vercel.app](https://lagwade.vercel.app)
+
+---
+
 ## ✨ Features
 
 - 🎯 **Targeted Strategy Generation**: Custom-built interview strategy tailored to any job description.
