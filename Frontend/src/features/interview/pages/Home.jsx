@@ -3,7 +3,7 @@ import React, { useState, useRef } from 'react'
 import "../style/home.scss"
 import { useInterview } from '../hooks/useInterview.js'
 import { useAuth } from '../../auth/hooks/useAuth.js'
-import { useNavigate } from 'react-router'
+import { useNavigate, Link } from 'react-router'
 import Loader from "../components/Loader";
 
 const Home = () => {
@@ -103,8 +103,12 @@ const Home = () => {
     return (
         <div className='home-page'>
 
-            {/* Top Navigation Bar with Logout */}
+            {/* Top Navigation Bar with Brand Logo & Logout */}
             <div className='home-nav'>
+                <Link to="/" className='brand-logo' title='LagwaDe Home'>
+                    <img src="/favicon-96x96.png" alt="LagwaDe Logo" className="brand-logo__img" />
+                    <span className='brand-logo__name'>LagwaDe</span>
+                </Link>
                 <button onClick={handleLogout} className='logout-btn' title='Logout'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />

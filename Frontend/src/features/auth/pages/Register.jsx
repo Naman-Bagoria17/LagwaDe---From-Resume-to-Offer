@@ -28,6 +28,12 @@ const Register = () => {
 
     return (
         <main>
+            <header className="auth-nav">
+                <Link to="/" className="brand-logo" title="LagwaDe Home">
+                    <img src="/favicon-96x96.png" alt="LagwaDe Logo" className="brand-logo__img" />
+                    <span className="brand-logo__name">LagwaDe</span>
+                </Link>
+            </header>
             <div className="form-container">
                 <h1>Register</h1>
                 <p className="auth-subtitle">Create your account</p>
