@@ -1,0 +1,58 @@
+.button {
+    border: none;
+    outline: none;
+    padding-inline: 1.5rem;
+    padding-block: 0.75rem;
+    border-radius: 1rem;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+
+    &.primary-button {
+        background-color: #023E7D;
+        color: #F8FAFC;
+        border: 1px solid #24415F;
+        box-shadow: 0 2px 8px rgba(2, 62, 125, 0.3);
+
+        &:hover {
+            background-color: #0353A4;
+            border-color: #3A86D1;
+            box-shadow: 0 4px 12px rgba(3, 83, 164, 0.4);
+        }
+
+        &:focus-visible {
+            outline: 2px solid #3A86D1;
+            outline-offset: 2px;
+        }
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    .spinner {
+        width: 16px;
+        height: 16px;
+        border: 2px solid rgba(248, 250, 252, 0.3);
+        border-top-color: #F8FAFC;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
