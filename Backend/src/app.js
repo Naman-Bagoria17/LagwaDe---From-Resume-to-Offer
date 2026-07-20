@@ -12,15 +12,18 @@ const allowedOrigins = [
 ].filter(Boolean)
 
 app.use(cors({
-    origin: function (origin, callback) {
+    origin(origin, callback) {
+        console.log("Origin:", origin);
+
         if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true)
-        } else {
-            callback(new Error("Not allowed by CORS"))
+            return callback(null, true);
         }
+
+        console.log("Blocked Origin:", origin);
+        return callback(new Error("Not allowed by CORS"));
     },
-    credentials: true
-}))
+    credentials: true,
+}));
 
 /* require all the routes here */
 const authRouter = require("./routes/auth.routes")
